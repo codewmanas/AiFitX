@@ -1,7 +1,10 @@
+'use client'
+
+
 const Homepage = () => {
   return (
     <div>
-      HomePage
+      
     </div>
   )
 }

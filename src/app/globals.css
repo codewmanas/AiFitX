@@ -50,10 +50,10 @@
   /* Cyberpunk Theme Colors */
   --cyber-black: #000000;
   --cyber-dark: #0a0c14;
-  --cyber-blue-bright: #18cef2; 
-  --cyber-blue: #1089bd; 
-  --cyber-blue-dark: #0b4a7d; 
-  --cyber-blue-glow: #38bdf8; 
+  --cyber-blue-bright: #18cef2;
+  --cyber-blue: #1089bd;
+  --cyber-blue-dark: #0b4a7d;
+  --cyber-blue-glow: #38bdf8;
   --cyber-accent: #0ff4;
 
   /* Background */
@@ -190,6 +190,7 @@
   }
 }
 
+/* TODO: EXPLAIN THIS BC U PROMISED JUST IN THE FIRST SECTION */
 @keyframes slow-spin {
   from {
     transform: rotate(0deg);
