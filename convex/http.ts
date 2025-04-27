@@ -64,6 +64,25 @@ http.route({
                     return new Response("Error syncing user", { status: 500 });
                }
           }
+          
+          if(eventType === "user.updated"){
+               const { id, email_addresses, first_name, last_name, image_url } = event.data;
+
+      const email = email_addresses[0].email_address;
+      const name = `${first_name || ""} ${last_name || ""}`.trim();
+
+      try {
+        await ctx.runMutation(api.users.updateUser, {
+          clerkId: id,
+          email,
+          name,
+          image: image_url,
+        });
+      } catch (error) {
+        console.log("Error updating user:", error);
+        return new Response("Error updating user", { status: 500 });
+      }
+          }
 
           return new Response("Webhook Processed successfully", { status: 200 });
      })
